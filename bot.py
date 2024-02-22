@@ -17,7 +17,7 @@ PREFIX = "!"
 async def echo(room, message):
     match = botlib.MessageMatch(room, message, bot, PREFIX)
     if match.prefix():
-        # if match.is_not_from_this_bot():
+        # if match.prefix() and match.is_not_from_this_bot():
 
         if match.command("binance"):
             try:
